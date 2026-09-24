@@ -14,6 +14,19 @@ import math
 # Предельное по модулю значение коэффициента
 MAX_VALUE = 10000
 
+HELP_TEXT = (
+    "mathtool — решение уравнений вида A*x^2 + B*x + C = 0\n"
+    "\n"
+    "Использование:\n"
+    "    python mathtool.py                          вывод справки\n"
+    "    python mathtool.py --help                    вывод справки\n"
+    "    python mathtool.py solve                     ввод коэффициентов с клавиатуры\n"
+    "    python mathtool.py solve -a 1 -b -3 -c 2      решение с заданными коэффициентами\n"
+    "\n"
+    "Коэффициенты A, B, C — целые числа, по модулю не превышающие 10000."
+)
+
+
 def print_error(message):
     """Вывод сообщения об ошибке в поток ошибок."""
     print(message, file=sys.stderr)
